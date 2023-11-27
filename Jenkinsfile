@@ -6,13 +6,13 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'mvn clean install'
+        sh './mvnw clean install'
       }
     }
     stage('Sonarqube analysis') {
       steps {
         withSonarQubeEnv('sonarqube') {
-          sh 'mvn sonar:sonar'
+          sh './mvnw sonar:sonar'
         }
       }
     }
