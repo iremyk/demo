@@ -7,7 +7,7 @@ pipeline {
     stage('Scan') {
       steps {
         withSonarQubeEnv(installationName: 'sonarqube') {
-          withMaven(maven:'Maven 3.9.5') {
+          withMaven(maven:'Maven 3.9.2') {
               sh 'mvn clean package sonar:sonar'
           }
         }
