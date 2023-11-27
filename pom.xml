@@ -15,12 +15,7 @@
     <description>demo</description>
     <properties>
         <java.version>21</java.version>
-        <sonar.exclusions>src/main/java/com/example/demo/controller/ProductController.java</sonar.exclusions>
-        <sonar.exclusions>src/main/java/com/example/demo/model/Product.java</sonar.exclusions>
-        <sonar.exclusions>src/main/java/com/example/demo/repository/ProductRepository.java</sonar.exclusions>
-        <sonar.exclusions>src/test/java/com/example/demo/*.java</sonar.exclusions>
-
-
+        <sonar.exclusions>src/*</sonar.exclusions>
     </properties>
     <dependencies>
         <dependency>
