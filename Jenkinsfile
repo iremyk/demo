@@ -4,10 +4,15 @@ pipeline {
     buildDiscarder(logRotator(numToKeepStr: '5'))
   }
   stages {
-    stage('Scan') {
+    stage('Build') {
       steps {
-        withSonarQubeEnv(installationName: 'sonarqube') {
-            sh 'mvnw clean package sonar:sonar'
+        sh 'mvn clean install'
+      }
+    }
+    stage('Sonarqube analysis') {
+      steps {
+        withSonarQubeEnv('sonarqube') {
+          sh 'mvn sonar:sonar'
         }
       }
     }
