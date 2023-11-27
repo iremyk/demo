@@ -15,7 +15,7 @@
     <description>demo</description>
     <properties>
         <java.version>21</java.version>
-        <sonar.java.binaries>target/classes/com/example/demo/*</sonar.java.binaries>
+        <sonar.java.binaries>target/classes/com/example/demo/controller/ProductController.class, target/classes/com/example/demo/model/Product.class, target/classes/com/example/demo/DemoApplication.class</sonar.java.binaries>
     </properties>
     <dependencies>
         <dependency>
