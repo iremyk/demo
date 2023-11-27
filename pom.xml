@@ -15,7 +15,7 @@
     <description>demo</description>
     <properties>
         <java.version>21</java.version>
-        <sonar.exclusions>src/*</sonar.exclusions>
+        <sonar.java.binaries>target/classes/com/example/demo/*</sonar.java.binaries>
     </properties>
     <dependencies>
         <dependency>
